@@ -1,0 +1,176 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', 'Helvetica', sans-serif; /* System and web-safe font */
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: linear-gradient(135deg, #1E3A8A, #F9A8D4); /* Dark Blue and Pink Gradient */
+}
+
+/* Wrapper for form (box around the form) */
+.wrapper {
+  width: 380px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+  padding: 20px;
+}
+
+/* Title Styling with underline */
+.title {
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  color: #1E3A8A; /* Dark Blue Color */
+  margin-bottom: 20px;
+}
+
+.title::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 4px;
+  background: #F9A8D4; /* Pink Underline */
+  margin: 10px auto;
+  border-radius: 5px;
+}
+
+/* Form styling */
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+/* Field for each input */
+form .field {
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+}
+
+/* Input field styles */
+form .field input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  font-size: 17px;
+  padding-left: 20px;
+  border: 1px solid lightgrey;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+/* Input focus and valid state styling */
+form .field input:focus,
+form .field input:valid {
+  border-color: #F9A8D4; /* Pink border on focus */
+}
+
+/* Label styling for each input */
+form .field label {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  color: #999999;
+  font-weight: 400;
+  font-size: 17px;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+
+/* Label animation on focus/valid input */
+form .field input:focus ~ label,
+form .field input:valid ~ label {
+  top: 0%;
+  font-size: 16px;
+  color: #F9A8D4; /* Pink color for label */
+  background: #fff;
+  transform: translateY(-50%);
+}
+
+/* Content styling for checkbox and link */
+form .content {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* Checkbox styling */
+form .content .checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Input checkbox styles */
+form .content input {
+  width: 15px;
+  height: 15px;
+  background: red;
+}
+
+/* Forgot password and signup link styling */
+form .content .pass-link {
+  color: #1E3A8A; /* Dark Blue color for forgot password */
+}
+
+form .signup-link {
+  color: #1E3A8A; /* Dark Blue color for signup link */
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Forgot password link hover effect */
+form .content .pass-link a,
+form .signup-link a {
+  color: #1E3A8A; /* Dark Blue color */
+  text-decoration: none;
+}
+
+/* Hover effect for forgot password and signup links */
+form .content .pass-link a:hover,
+form .signup-link a:hover {
+  text-decoration: underline;
+}
+
+/* Submit button styling */
+form .field input[type="submit"] {
+  color: #fff;
+  border: none;
+  padding-left: 0;
+  margin-top: -10px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  background: #1E3A8A; /* Dark Blue background for button */
+  transition: all 0.3s ease;
+}
+
+/* Submit button active state */
+form .field input[type="submit"]:active {
+  transform: scale(0.95);
+}
+
+/* Error message styling */
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+  display: block;
+}

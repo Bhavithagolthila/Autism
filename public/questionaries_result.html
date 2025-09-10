@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Questionnaire Results</title>
+   <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <div class="container">
+      <h2>Your Results</h2>
+      <div id="results"></div>
+      <a href="website.html" class="btn">Return to Home</a>
+      <a href="Autism.html" class="btn">Want to know more about autism?</a>
+   </div>
+
+   <script>
+      fetch("/results")
+         .then(res => res.json())
+         .then(data => {
+            document.getElementById("results").innerHTML = `
+               <p><strong>Autism Likelihood:</strong> ${data.likelihood}</p>
+               <p><strong>Score Percentage:</strong> ${data.percentage.toFixed(2)}%</p>
+               <div class="recommendations">
+                  <h3>Recommendations:</h3>
+                  <p>${data.recommendations}</p>
+               </div>
+            `;
+         })
+         .catch(() => {
+            document.getElementById("results").innerHTML = "Error loading results.";
+         });
+   </script>
+</body>
+</html>

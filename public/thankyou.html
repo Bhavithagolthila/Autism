@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: white;
+    }
+
+    .thank-you-box {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 50px 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+      animation: fadeIn 1.3s ease-in-out;
+    }
+
+    .thank-you-box h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+
+    .thank-you-box p {
+      font-size: 1.2rem;
+      margin-bottom: 25px;
+    }
+
+    .back-home {
+      text-decoration: none;
+      background: #fff;
+      color: #2575fc;
+      padding: 12px 30px;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: 0.3s;
+      display: inline-block;
+    }
+
+    .back-home:hover {
+      background: #2575fc;
+      color: white;
+      border: 2px solid #fff;
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="thank-you-box">
+    <h1>🎉 Thank You!</h1>
+    <p>Your response has been recorded successfully.<br>
+       We truly appreciate your time and support.</p>
+    <a href="website.html" class="back-home">⬅ Back to Home</a>
+  </div>
+
+</body>
+</html>

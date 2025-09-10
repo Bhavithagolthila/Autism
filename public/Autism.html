@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autism Spectrum Disorder (ASD)</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #001f3f, #000000);
+            color: #ffffff;
+            line-height: 1.5;
+        }
+
+        /* Header Section */
+        header {
+            background-color: #002244;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        header h1 {
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        /* Logo positioning */
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            height: 85px;
+        }
+
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #001a33;
+            padding: 15px 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            color: white;
+            font-size: 18px;
+            padding: 12px 25px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #0077b6;
+            border-radius: 5px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #004080, #001f3f);
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .auth-buttons button {
+            padding: 15px 35px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffffff;
+            background: #000;
+            border: 2px solid #0077b6;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            margin: 10px;
+            box-shadow: 0 0 15px #0077b6;
+        }
+
+        .auth-buttons button:hover {
+            background: #0077b6;
+            box-shadow: 0 0 30px #00b4d8;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #002244;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 16px;
+        }
+
+        footer a {
+            color: #00b4d8;
+        }
+
+        footer a:hover {
+            color: #ffb74d;
+        }
+
+        /* About Section */
+        .about {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: black;
+            padding: 60px 20px;
+            margin-bottom: 60px;
+        }
+
+        .about .centered-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            padding-right: 30px;
+        }
+
+        .about .centered-image img {
+            border-radius: 10px;
+            max-width: 100%;
+            height: auto;
+            width: 350px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .about .about-text {
+            flex: 2;
+            text-align: left;
+            padding-left: 20px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<!-- Header Section -->
+<header>
+    <img src="autism2.jpg" alt="Logo" class="logo">
+    <h1>Autism Spectrum Disorder (ASD)</h1>
+</header>
+
+<!-- Navigation Bar -->
+<nav>
+    <ul>
+        <li><a href="symptoms.html">Symptoms</a></li>
+        <li><a href="causes.html">Causes</a></li>
+        <li><a href="diagnosis.html">Diagnosis</a></li>
+    </ul>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+    <h2>Understanding Autism Spectrum Disorder</h2>
+    <p>Join us in raising awareness and providing support for individuals on the autism spectrum.</p>
+    <div class="auth-buttons"></div>
+</section>
+
+<!-- About Section -->
+<section class="about">
+    <div class="centered-image">
+        <img src="autism3.jpeg" alt="Autism Information">
+    </div>
+    <div class="about-text">
+        <h1>What is Autism Spectrum Disorder?</h1>
+        <h3>
+            Autism Spectrum Disorder (ASD) is a developmental disorder that affects communication, behavior, and social interaction. 
+            Individuals with ASD may have difficulty with verbal and non-verbal communication, forming relationships, and adjusting to changes in routine. 
+            Early intervention and support can help individuals on the autism spectrum lead fulfilling lives.
+        </h3>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer>
+    <p>&copy; 2024 Autism Awareness | <a href="#">Privacy Policy</a></p>
+</footer>
+
+<script>
+    const authButtonsContainer = document.querySelector('.auth-buttons');
+
+    const registerButton = document.createElement('button');
+    registerButton.textContent = 'Register';
+    registerButton.onclick = function() {
+        window.location.href = 'register.html';
+    };
+
+    const loginButton = document.createElement('button');
+    loginButton.textContent = 'Login';
+    loginButton.onclick = function() {
+        window.location.href = 'login.html';
+    };
+
+    authButtonsContainer.appendChild(registerButton);
+    authButtonsContainer.appendChild(loginButton);
+</script>
+
+
+
+</body>
+</html>

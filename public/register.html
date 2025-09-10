@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Register</title>
+   <link rel="stylesheet" href="register.css">
+   <script>
+      function validateForm(event) {
+         const email = document.getElementById("email").value;
+         const phone = document.getElementById("phone").value;
+         const password = document.getElementById("password").value;
+         const confirmPassword = document.getElementById("confirm-password").value;
+
+         let errors = [];
+         if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) errors.push("Invalid email format.");
+         if (!/^[0-9]{10}$/.test(phone)) errors.push("Phone number must be 10 digits.");
+         if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/.test(password)) errors.push("Password must be 8+ chars, 1 uppercase, 1 lowercase, 1 number.");
+         if (password !== confirmPassword) errors.push("Passwords do not match.");
+
+         if (errors.length > 0) {
+            event.preventDefault();
+            alert(errors.join("\n"));
+         }
+      }
+   </script>
+</head>
+<body>
+   <div class="container">
+      <div class="title">Registration</div>
+      <div class="content">
+         <form id="registration-form" action="/register" method="POST" onsubmit="validateForm(event)">
+            <div class="user-details">
+               <div class="input-box">
+                  <span class="details">Name</span>
+                  <input type="text" name="name" required>
+               </div>
+               <div class="input-box">
+                  <span class="details">Username</span>
+                  <input type="text" name="username" required>
+               </div>
+               <div class="input-box">
+                  <span class="details">Email</span>
+                  <input type="email" id="email" name="email" required>
+               </div>
+               <div class="input-box">
+                  <span class="details">Phone Number</span>
+                  <input type="text" id="phone" name="phone" required>
+               </div>
+               <div class="input-box">
+                  <span class="details">Password</span>
+                  <input type="password" id="password" name="password" required>
+               </div>
+               <div class="input-box">
+                  <span class="details">Confirm Password</span>
+                  <input type="password" id="confirm-password" name="confirm-password" required>
+               </div>
+            </div>
+            <div class="button">
+               <input type="submit" value="Register">
+            </div>
+         </form>
+      </div>
+   </div>
+</body>
+</html>
