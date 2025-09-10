@@ -143,14 +143,14 @@ app.post("/questionaries", authRequired, (req, res) => {
       let score = 0;
       Object.values(answers).forEach(a => (score += mapping[a] || 0));
       const percentage = (score / (10 * 3)) * 100;
-      let likelihood = "Low";
-      if (percentage > 60) likelihood = "High";
-      else if (percentage > 30) likelihood = "Medium";
+      let likelihood = "Mild";
+      if (percentage > 60) likelihood = "Severe";
+      else if (percentage > 30) likelihood = "Moderate";
 
       const recommendations =
-        likelihood === "High"
+        likelihood === "Severe"
           ? "Consult a specialist and consider therapies."
-          : likelihood === "Medium"
+          : likelihood === "Moderate"
           ? "Monitor child behavior, consult doctor if needed."
           : "No major concerns, keep observing.";
 
